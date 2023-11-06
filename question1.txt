@@ -1,0 +1,24 @@
+Q1. Demonstrate the working of array which reads 10 elements by using 
+array and display all the elements in reverse order. Receive the input 
+from the user.
+
+#include <stdio.h>
+
+int main() {
+    int elements[10]; // Initialize an array to store the elements
+
+    // Read 10 elements from the user
+    printf("Enter 10 elements:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%d", &elements[i]);
+    }
+
+    // Display the elements in reverse order
+    printf("Elements in reverse order:\n");
+    for (int i = 9; i >= 0; i--) {
+        printf("%d\n", elements[i]);
+    }
+
+    return 0;
+}

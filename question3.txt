@@ -1,0 +1,45 @@
+Q3 Write a program in C to create a structure having named as books 
+consists of title, author, subject, book_id as its members. Read the 
+details of five books from user and display the data entered by the 
+user on screen(Use array of structure)
+
+
+#include <stdio.h>
+// Define the structure for books
+struct Book {
+    char title[100];
+    char author[100];
+    char subject[100];
+    int book_id;
+};
+
+int main() {
+    struct Book library[5]; // Create an array of structures to store details of 5 books
+
+    // Read details of 5 books from the user
+    printf("Enter details of 5 books:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("Book %d:\n", i + 1);
+        printf("Title: ");
+        scanf(" %[^\n]s", library[i].title);
+        printf("Author: ");
+        scanf(" %[^\n]s", library[i].author);
+        printf("Subject: ");
+        scanf(" %[^\n]s", library[i].subject);
+        printf("Book ID: ");
+        scanf("%d", &library[i].book_id);
+    }
+
+    // Display the details of the books
+    printf("\nDetails of 5 books:\n");
+    for (int i = 0; i < 5; i++) {
+        printf("Book %d:\n", i + 1);
+        printf("Title: %s\n", library[i].title);
+        printf("Author: %s\n", library[i].author);
+        printf("Subject: %s\n", library[i].subject);
+        printf("Book ID: %d\n", library[i].book_id);
+        printf("\n");
+    }
+
+    return 0;
+}

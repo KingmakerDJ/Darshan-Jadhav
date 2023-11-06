@@ -1,0 +1,34 @@
+Q4 Define a structure named ‘State’ which contains four fields name,
+population, lit_rate, income. Declare a structure variable as 
+st1.Assign the values for your structure members as 
+Maharashtra,1000000,5.8,6000.00 respectively.
+
+
+#include <stdio.h>
+
+// Define the "state" structure
+struct State {
+    char name[50];
+    long int population;
+    float lit_rate;
+    float income;
+};
+
+int main() {
+    // Declare a structure variable st1 and assign values
+    struct State st1;
+
+    // Assign values to the structure members
+    strcpy(st1.name, "Maharashtra");
+    st1.population = 1000000;
+    st1.lit_rate = 5.8;
+    st1.income = 6000.00;
+
+    // Display the values assigned to the structure members
+    printf("State Name: %s\n", st1.name);
+    printf("Population: %ld\n", st1.population);
+    printf("Literacy Rate: %.2f\n", st1.lit_rate);
+    printf("Income: %.2f\n", st1.income);
+
+    return 0;
+}
